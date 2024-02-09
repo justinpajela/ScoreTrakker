@@ -5,7 +5,7 @@
  * Sources: Stack Overflow on collections and parsing
  */
 		
-package ScoreTrakker;
+package ScoreTrakkerPart1;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -26,9 +26,9 @@ public class ScoreTrakker {
         try {
             Scanner fileScanner = new Scanner(new File(fileName));
             while (fileScanner.hasNextLine()) {
-                String name = fileScanner.nextLine(); // Read the student's name
+                String name = fileScanner.nextLine(); 								
                 if (fileScanner.hasNextLine()) {
-                    int score = Integer.parseInt(fileScanner.nextLine()); // Read the student's score
+                    int score = Integer.parseInt(fileScanner.nextLine()); 
                     Student student = new Student(name, score);
                     studentList.add(student);
                 }

@@ -1,0 +1,5 @@
+ScoreTrakkerPart 1 contains the classes Student and ScoreTrakker, these are the files that match up to part one of the assignment and only
+scores.txt comparison and print
+
+ScoreTrakkerPart2 contains the classes Student and ScoreTrakker which only ScoreTrakker has been modified from part 1 to get the exceptions 
+of the number error and file not found
