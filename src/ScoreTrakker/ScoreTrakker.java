@@ -26,19 +26,18 @@ public class ScoreTrakker {
         try {
             Scanner fileScanner = new Scanner(new File(fileName));
             while (fileScanner.hasNextLine()) {
-                String line = fileScanner.nextLine();
-                String[] parts = line.split(" ");
-                String name = parts[0] + " " + parts[1];				// 
-                int score = Integer.parseInt(parts[2]);
-                Student student = new Student(name, score);
-                studentList.add(student);
+                String name = fileScanner.nextLine(); // Read the student's name
+                if (fileScanner.hasNextLine()) {
+                    int score = Integer.parseInt(fileScanner.nextLine()); // Read the student's score
+                    Student student = new Student(name, score);
+                    studentList.add(student);
+                }
             }
             fileScanner.close();
         } catch (FileNotFoundException e) {
             System.out.println("File not found: " + fileName);
         }
     }
-    
 /*
  * printInOrder sorts the student list by score
  */
